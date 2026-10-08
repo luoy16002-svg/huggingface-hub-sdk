@@ -1,0 +1,119 @@
+{
+  "existing": {
+    "model": {
+      "MODEL00": {
+        "author": "sd2",
+        "cardData": {},
+        "config": {},
+        "createdAt": "sd5",
+        "disabled": true,
+        "downloads": 215,
+        "gated": "sd8",
+        "id": "MODEL00",
+        "lastModified": "sda",
+        "library_name": "sdb",
+        "likes": 220,
+        "modelId": "sdd",
+        "pipeline_tag": "sde",
+        "private": false,
+        "safetensors": {},
+        "sha": "se1",
+        "siblings": [],
+        "spaces": [],
+        "tags": [],
+        "trendingScore": 229,
+        "usedStorage": 230,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      },
+      "MODEL01": {
+        "author": "s1a4",
+        "cardData": {},
+        "config": {},
+        "createdAt": "s1a7",
+        "disabled": true,
+        "downloads": 425,
+        "gated": "s1aa",
+        "id": "MODEL01",
+        "lastModified": "s1ac",
+        "library_name": "s1ad",
+        "likes": 430,
+        "modelId": "s1af",
+        "pipeline_tag": "s1b0",
+        "private": false,
+        "safetensors": {},
+        "sha": "s1b3",
+        "siblings": [],
+        "spaces": [],
+        "tags": [],
+        "trendingScore": 439,
+        "usedStorage": 440,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      },
+      "MODEL02": {
+        "author": "s276",
+        "cardData": {},
+        "config": {},
+        "createdAt": "s279",
+        "disabled": true,
+        "downloads": 635,
+        "gated": "s27c",
+        "id": "MODEL02",
+        "lastModified": "s27e",
+        "library_name": "s27f",
+        "likes": 640,
+        "modelId": "s281",
+        "pipeline_tag": "s282",
+        "private": false,
+        "safetensors": {},
+        "sha": "s285",
+        "siblings": [],
+        "spaces": [],
+        "tags": [],
+        "trendingScore": 649,
+        "usedStorage": 650,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      }
+    }
+  },
+  "new": {
+    "model": {
+      "model_ref01": {
+        "author": "s348",
+        "cardData": {},
+        "config": {},
+        "createdAt": "s34b",
+        "disabled": true,
+        "downloads": 845,
+        "gated": "s34e",
+        "lastModified": "s350",
+        "library_name": "s351",
+        "likes": 850,
+        "modelId": "s353",
+        "pipeline_tag": "s354",
+        "private": false,
+        "safetensors": {},
+        "sha": "s357",
+        "siblings": [],
+        "spaces": [],
+        "tags": [],
+        "trendingScore": 859,
+        "usedStorage": 860
+      }
+    }
+  },
+  "requests": {
+    "GET /api/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/models/{namespace}/{repo}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

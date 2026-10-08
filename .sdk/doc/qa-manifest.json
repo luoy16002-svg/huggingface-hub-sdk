@@ -1,0 +1,37 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "A focused slice of the Hugging Face Hub API: models, datasets, Spaces, papers, collections and users (read operations). Cut from https://huggingface.co/.well-known/openapi.json; the model, dataset and Space list/info endpoints come from spec/supplement.json because the published file does not include them.",
+      "A hex string of 24 characters representing an ObjectId.",
+      "Auth information",
+      "Free-text description of the bucket / container image",
+      "Hub",
+      "List of daily papers",
+      "List of papers",
+      "Matching datasets.",
+      "Matching models.",
+      "Matching spaces.",
+      "Paper data",
+      "Paper data with metadata",
+      "Repo id, namespace/name.",
+      "Set when the user is a service account",
+      "The collection data",
+      "The dataset",
+      "The model",
+      "The space",
+      "The user&#39;s hardware items, unless the user set them as private",
+      "Trending repos",
+      "User overview data including their organizations, stats, and creation date",
+      "User overview information",
+      "false, or &#39;auto&#39; / &#39;manual&#39; when access needs approval.",
+      "gradio, streamlit, docker or static.",
+      "only available when field contains &#39;comments&#39;",
+      "only available when field contains &#39;submissionDeadline&#39;"
+    ]
+  }
+}

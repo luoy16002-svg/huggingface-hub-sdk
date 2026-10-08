@@ -1,0 +1,56 @@
+# Project overlay — YOURS. The scaffold creates this file once and never
+# overwrites it.
+#
+# Most of model/ is toolchain-derived and is deliberately regenerated so that
+# toolchain fixes propagate; this file, the guide, and the target, feature and
+# edition indexes are kept. Put anything here that is a decision about THIS
+# project rather than a fact about the API.
+#
+# Included LAST by sdk.aontu, after target/target-index.aontu, because a key
+# under main.kit.target.<t> can only refine a target that has already been
+# defined. Declared earlier, the model build fails with "Cannot unify value:
+# nil with value: string / key ext value was: nil", which names nothing that
+# would lead you here.
+#
+# The release version each generated manifest declares (package.json,
+# pyproject.toml, the gemspec, the rockspec) and that the port Makefiles tag:
+#
+#   main: kit: target: ts: publish: version: '1.2.3'
+#
+# Per target, because ports publish to different registries on different
+# clocks. Set every target to the same value for a lockstep repo.
+#
+# A published package name that does not follow the derivation:
+#
+#   main: kit: target: ts: publish: registry: package: '@scope/name'
+
+
+# ---- Kai Chen, 2026-10-08 ----
+
+main: kit: repo: path: 'luoy16002-svg/huggingface-hub-sdk'
+
+main: kit: publisher: {
+  name: 'Kai Chen'
+  url: 'https://github.com/luoy16002-svg'
+  security: 'https://github.com/luoy16002-svg/huggingface-hub-sdk/issues'
+}
+
+main: kit: text: {
+  title: 'Hugging Face Hub'
+  tagline: 'Search and read models, datasets, Spaces, papers and collections on the Hugging Face Hub.'
+  summary: 'The Hugging Face Hub hosts open models, datasets and demo apps (Spaces). This SDK covers its public read API.'
+  website: 'https://huggingface.co'
+  docs_url: 'https://huggingface.co/docs/hub/api'
+  about_md: 'An unofficial SDK for a focused, read-only slice of the Hugging Face Hub API, generated with the Voxgig SDK generator. It is not affiliated with or endorsed by Hugging Face. The spec slice and the reasons for it are in `spec/README.md`.'
+  entity_desc: {
+    model: 'A model repository, addressed by namespace and repo (for example openai-community / gpt2).'
+    dataset: 'A dataset repository, addressed by namespace and repo.'
+    space: 'A Space (a hosted demo app), addressed by namespace and repo.'
+    paper: 'A paper on hf.co/papers, addressed by its arXiv id. List with $action search to search.'
+    daily_paper: 'An entry in Daily Papers: a paper plus who submitted it and when.'
+    trending: 'One trending repo (model, dataset or Space) from the Hub front page.'
+    collection: 'A curated collection of repos and papers.'
+    profile: 'A user profile overview, addressed by username.'
+    auth: 'The account behind the API token (whoami). Needs HUGGINGFACE_HUB_APIKEY.'
+  }
+}

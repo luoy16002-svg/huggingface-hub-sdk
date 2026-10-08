@@ -1,0 +1,111 @@
+{
+  "existing": {
+    "space": {
+      "SPACE00": {
+        "author": "sbe",
+        "cardData": {},
+        "createdAt": "sc0",
+        "disabled": false,
+        "gated": "sc2",
+        "host": "sc3",
+        "id": "SPACE00",
+        "lastModified": "sc5",
+        "likes": 198,
+        "models": [],
+        "private": true,
+        "runtime": {},
+        "sdk": "sca",
+        "sha": "scb",
+        "siblings": [],
+        "subdomain": "scd",
+        "tags": [],
+        "trendingScore": 207,
+        "usedStorage": 208,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      },
+      "SPACE01": {
+        "author": "s17c",
+        "cardData": {},
+        "createdAt": "s17e",
+        "disabled": false,
+        "gated": "s180",
+        "host": "s181",
+        "id": "SPACE01",
+        "lastModified": "s183",
+        "likes": 388,
+        "models": [],
+        "private": true,
+        "runtime": {},
+        "sdk": "s188",
+        "sha": "s189",
+        "siblings": [],
+        "subdomain": "s18b",
+        "tags": [],
+        "trendingScore": 397,
+        "usedStorage": 398,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      },
+      "SPACE02": {
+        "author": "s23a",
+        "cardData": {},
+        "createdAt": "s23c",
+        "disabled": false,
+        "gated": "s23e",
+        "host": "s23f",
+        "id": "SPACE02",
+        "lastModified": "s241",
+        "likes": 578,
+        "models": [],
+        "private": true,
+        "runtime": {},
+        "sdk": "s246",
+        "sha": "s247",
+        "siblings": [],
+        "subdomain": "s249",
+        "tags": [],
+        "trendingScore": 587,
+        "usedStorage": 588,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      }
+    }
+  },
+  "new": {
+    "space": {
+      "space_ref01": {
+        "author": "s2f8",
+        "cardData": {},
+        "createdAt": "s2fa",
+        "disabled": false,
+        "gated": "s2fc",
+        "host": "s2fd",
+        "lastModified": "s2ff",
+        "likes": 768,
+        "models": [],
+        "private": true,
+        "runtime": {},
+        "sdk": "s304",
+        "sha": "s305",
+        "siblings": [],
+        "subdomain": "s307",
+        "tags": [],
+        "trendingScore": 777,
+        "usedStorage": 778
+      }
+    }
+  },
+  "requests": {
+    "GET /api/spaces": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/spaces/{namespace}/{repo}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

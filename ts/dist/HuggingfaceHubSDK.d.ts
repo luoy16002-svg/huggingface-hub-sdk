@@ -1,0 +1,63 @@
+import { AuthEntity } from './entity/AuthEntity';
+import { CollectionEntity } from './entity/CollectionEntity';
+import { DailyPaperEntity } from './entity/DailyPaperEntity';
+import { DatasetEntity } from './entity/DatasetEntity';
+import { ModelEntity } from './entity/ModelEntity';
+import { PaperEntity } from './entity/PaperEntity';
+import { ProfileEntity } from './entity/ProfileEntity';
+import { SpaceEntity } from './entity/SpaceEntity';
+import { TrendingEntity } from './entity/TrendingEntity';
+export type * from './HuggingfaceHubTypes';
+import { inspect } from 'node:util';
+import type { Context, Feature } from './types';
+import { config } from './Config';
+import { HuggingfaceHubEntityBase } from './HuggingfaceHubEntityBase';
+import { Utility } from './utility/Utility';
+import { BaseFeature } from './feature/base/BaseFeature';
+declare const stdutil: Utility;
+type DirectResult = {
+    ok: false;
+    err: any;
+    status?: undefined;
+    headers?: undefined;
+    data?: undefined;
+} | {
+    ok: boolean;
+    status: number;
+    headers: any;
+    data: any;
+    err?: any;
+};
+declare class HuggingfaceHubSDK {
+    _mode: string;
+    _options: any;
+    _utility: Utility;
+    _features: Feature[];
+    _rootctx: Context;
+    constructor(options?: any);
+    options(): any;
+    utility(): any;
+    prepare(fetchargs?: any): Promise<any>;
+    direct(fetchargs?: any): Promise<DirectResult>;
+    _rawRequest(fetchargs?: any): Promise<DirectResult>;
+    graphql(query: string, variables?: any, ctrl?: any): Promise<any>;
+    Auth(entopts?: Record<string, any>): AuthEntity;
+    Collection(entopts?: Record<string, any>): CollectionEntity;
+    DailyPaper(entopts?: Record<string, any>): DailyPaperEntity;
+    Dataset(entopts?: Record<string, any>): DatasetEntity;
+    Model(entopts?: Record<string, any>): ModelEntity;
+    Paper(entopts?: Record<string, any>): PaperEntity;
+    Profile(entopts?: Record<string, any>): ProfileEntity;
+    Space(entopts?: Record<string, any>): SpaceEntity;
+    Trending(entopts?: Record<string, any>): TrendingEntity;
+    static test(testoptsarg?: any, sdkoptsarg?: any): HuggingfaceHubSDK;
+    tester(testopts?: any, sdkopts?: any): HuggingfaceHubSDK;
+    toJSON(): {
+        name: string;
+    };
+    toString(): string;
+    [inspect.custom](): string;
+}
+declare const SDK: typeof HuggingfaceHubSDK;
+export { stdutil, config, BaseFeature, HuggingfaceHubEntityBase, HuggingfaceHubSDK, SDK, };
+export type { DirectResult };

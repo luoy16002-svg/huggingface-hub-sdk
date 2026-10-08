@@ -1,0 +1,3212 @@
+{
+  "NAME": "HUGGINGFACE-HUB",
+  "Name": "HuggingfaceHub",
+  "def": "hf-hub-openapi.slice.json",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "auth": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "auth",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/whoami-v2",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/whoami-v2",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "whoami-v2"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "collection": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "gating": {
+              "a": true,
+              "h": "Gating",
+              "n": "gating",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 3,
+                "count": 2,
+                "depth": 2
+              }
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "isUpvotedByUser": {
+              "a": true,
+              "h": "Is Upvoted By User",
+              "n": "isUpvotedByUser",
+              "r": true,
+              "t": "`$BOOLEAN`"
+            },
+            "items": {
+              "a": true,
+              "h": "Items",
+              "n": "items",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 6,
+                "count": 8,
+                "depth": 9
+              }
+            },
+            "lastUpdated": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Last Updated",
+              "n": "lastUpdated",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "owner": {
+              "a": true,
+              "h": "Owner",
+              "n": "owner",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "position": {
+              "a": true,
+              "h": "Position",
+              "n": "position",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "private": {
+              "a": true,
+              "h": "Private",
+              "n": "private",
+              "r": true,
+              "t": "`$BOOLEAN`"
+            },
+            "resourceGroup": {
+              "a": true,
+              "h": "Resource Group",
+              "n": "resourceGroup",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "shareUrl": {
+              "a": true,
+              "h": "Share Url",
+              "n": "shareUrl",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "theme": {
+              "a": true,
+              "h": "Theme",
+              "n": "theme",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "upvotes": {
+              "a": true,
+              "h": "Upvotes",
+              "n": "upvotes",
+              "r": true,
+              "t": "`$NUMBER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "from": {
+              "slug": "slug"
+            },
+            "name": "id",
+            "parts": [
+              "namespace",
+              "slug"
+            ],
+            "sep": "/"
+          },
+          "name": "collection",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/collections",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "expand",
+                        "or": "expand",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "item",
+                        "or": "item",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 10,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "owner",
+                        "or": "owner",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "trending",
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/collections",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "collections"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/collections/{namespace}/{slug}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "namespace",
+                        "or": "namespace",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/collections/{namespace}/{slug}",
+                  "q": {
+                    "exist": [
+                      "namespace",
+                      "slug"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "collections"
+                    },
+                    {
+                      "var": "namespace"
+                    },
+                    {
+                      "var": "slug"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "daily_paper": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "isAuthorParticipating": {
+              "a": true,
+              "h": "Is Author Participating",
+              "n": "isAuthorParticipating",
+              "r": true,
+              "t": "`$BOOLEAN`"
+            },
+            "mediaUrls": {
+              "a": true,
+              "h": "Media Urls",
+              "n": "mediaUrls",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "numComments": {
+              "a": true,
+              "h": "Num Comments",
+              "n": "numComments",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "paper": {
+              "a": true,
+              "h": "Paper",
+              "n": "paper",
+              "r": true,
+              "sh": "Paper data with metadata",
+              "t": "`$OBJECT`"
+            },
+            "publishedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Published At",
+              "n": "publishedAt",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "submittedBy": {
+              "a": true,
+              "h": "Submitted By",
+              "n": "submittedBy",
+              "r": true,
+              "sh": "User overview information",
+              "t": "`$OBJECT`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "thumbnail": {
+              "a": true,
+              "h": "Thumbnail",
+              "n": "thumbnail",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "daily_paper",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/daily_papers",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "date",
+                        "or": "date",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 50,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "month",
+                        "or": "month",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "p",
+                        "or": "p",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "publishedAt",
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "submitter",
+                        "or": "submitter",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "week",
+                        "or": "week",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/daily_papers",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "daily_papers"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "dataset": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "author": {
+              "a": true,
+              "h": "Author",
+              "n": "author",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "cardData": {
+              "a": true,
+              "h": "Card Data",
+              "n": "cardData",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "createdAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Created At",
+              "n": "createdAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "disabled": {
+              "a": true,
+              "h": "Disabled",
+              "n": "disabled",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "downloads": {
+              "a": true,
+              "h": "Downloads",
+              "n": "downloads",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "gated": {
+              "a": true,
+              "h": "Gated",
+              "n": "gated",
+              "r": false,
+              "sh": "false, or 'auto' / 'manual' when access needs approval.",
+              "t": "`$ANY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "op": {
+                "list": {
+                  "req": true,
+                  "type": "`$STRING`"
+                },
+                "load": {
+                  "req": true,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": false,
+              "sh": "Repo id, namespace/name.",
+              "t": "`$STRING`"
+            },
+            "lastModified": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Last Modified",
+              "n": "lastModified",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "likes": {
+              "a": true,
+              "h": "Likes",
+              "n": "likes",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "paperswithcode_id": {
+              "a": true,
+              "h": "Paperswithcode Id",
+              "n": "paperswithcode_id",
+              "r": false,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "private": {
+              "a": true,
+              "h": "Private",
+              "n": "private",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "sha": {
+              "a": true,
+              "h": "Sha",
+              "n": "sha",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "siblings": {
+              "a": true,
+              "h": "Siblings",
+              "n": "siblings",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "trendingScore": {
+              "a": true,
+              "h": "Trending Score",
+              "n": "trendingScore",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "usedStorage": {
+              "a": true,
+              "h": "Used Storage",
+              "n": "usedStorage",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id",
+            "parts": [
+              "namespace",
+              "repo"
+            ],
+            "sep": "/"
+          },
+          "name": "dataset",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/datasets",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "author",
+                        "or": "author",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "direction",
+                        "or": "direction",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "filter",
+                        "or": "filter",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "full",
+                        "or": "full",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/datasets",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "datasets"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/datasets/{namespace}/{repo}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "namespace",
+                        "or": "namespace",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "repo",
+                        "or": "repo",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/datasets/{namespace}/{repo}",
+                  "q": {
+                    "exist": [
+                      "namespace",
+                      "repo"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "var": "namespace"
+                    },
+                    {
+                      "var": "repo"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "model": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "author": {
+              "a": true,
+              "h": "Author",
+              "n": "author",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "cardData": {
+              "a": true,
+              "h": "Card Data",
+              "n": "cardData",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "config": {
+              "a": true,
+              "h": "Config",
+              "n": "config",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "createdAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Created At",
+              "n": "createdAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "disabled": {
+              "a": true,
+              "h": "Disabled",
+              "n": "disabled",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "downloads": {
+              "a": true,
+              "h": "Downloads",
+              "n": "downloads",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "gated": {
+              "a": true,
+              "h": "Gated",
+              "n": "gated",
+              "r": false,
+              "sh": "false, or 'auto' / 'manual' when access needs approval.",
+              "t": "`$ANY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "op": {
+                "list": {
+                  "req": true,
+                  "type": "`$STRING`"
+                },
+                "load": {
+                  "req": true,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": false,
+              "sh": "Repo id, namespace/name.",
+              "t": "`$STRING`"
+            },
+            "lastModified": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Last Modified",
+              "n": "lastModified",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "library_name": {
+              "a": true,
+              "h": "Library Name",
+              "n": "library_name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "likes": {
+              "a": true,
+              "h": "Likes",
+              "n": "likes",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "modelId": {
+              "a": true,
+              "h": "Model Id",
+              "n": "modelId",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "pipeline_tag": {
+              "a": true,
+              "h": "Pipeline Tag",
+              "n": "pipeline_tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "private": {
+              "a": true,
+              "h": "Private",
+              "n": "private",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "safetensors": {
+              "a": true,
+              "h": "Safetensors",
+              "n": "safetensors",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "sha": {
+              "a": true,
+              "h": "Sha",
+              "n": "sha",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "siblings": {
+              "a": true,
+              "h": "Siblings",
+              "n": "siblings",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "spaces": {
+              "a": true,
+              "h": "Spaces",
+              "n": "spaces",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "trendingScore": {
+              "a": true,
+              "h": "Trending Score",
+              "n": "trendingScore",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "usedStorage": {
+              "a": true,
+              "h": "Used Storage",
+              "n": "usedStorage",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id",
+            "parts": [
+              "namespace",
+              "repo"
+            ],
+            "sep": "/"
+          },
+          "name": "model",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/models",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "author",
+                        "or": "author",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "direction",
+                        "or": "direction",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "filter",
+                        "or": "filter",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "full",
+                        "or": "full",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/models",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "models"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/models/{namespace}/{repo}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "namespace",
+                        "or": "namespace",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "repo",
+                        "or": "repo",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/models/{namespace}/{repo}",
+                  "q": {
+                    "exist": [
+                      "namespace",
+                      "repo"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "models"
+                    },
+                    {
+                      "var": "namespace"
+                    },
+                    {
+                      "var": "repo"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "paper": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ai_keywords": {
+              "a": true,
+              "h": "Ai Keywords",
+              "n": "ai_keywords",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "ai_summary": {
+              "a": true,
+              "h": "Ai Summary",
+              "n": "ai_summary",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ai_summary_model": {
+              "a": true,
+              "h": "Ai Summary Model",
+              "n": "ai_summary_model",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "authors": {
+              "a": true,
+              "h": "Authors",
+              "n": "authors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "comments": {
+              "a": true,
+              "h": "Comments",
+              "n": "comments",
+              "r": false,
+              "sh": "only available when field contains 'comments'",
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 2,
+                "depth": 7
+              }
+            },
+            "discussionId": {
+              "a": true,
+              "h": "Discussion Id",
+              "n": "discussionId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "githubRepo": {
+              "a": true,
+              "h": "Github Repo",
+              "n": "githubRepo",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "githubStars": {
+              "a": true,
+              "h": "Github Stars",
+              "n": "githubStars",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "linkedDatasets": {
+              "a": true,
+              "h": "Linked Datasets",
+              "n": "linkedDatasets",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 3
+              }
+            },
+            "linkedModels": {
+              "a": true,
+              "h": "Linked Models",
+              "n": "linkedModels",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 2,
+                "depth": 3
+              }
+            },
+            "linkedSpaces": {
+              "a": true,
+              "h": "Linked Spaces",
+              "n": "linkedSpaces",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "mediaUrls": {
+              "a": true,
+              "h": "Media Urls",
+              "n": "mediaUrls",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "numTotalDatasets": {
+              "a": true,
+              "h": "Num Total Datasets",
+              "n": "numTotalDatasets",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "numTotalModels": {
+              "a": true,
+              "h": "Num Total Models",
+              "n": "numTotalModels",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "numTotalSpaces": {
+              "a": true,
+              "h": "Num Total Spaces",
+              "n": "numTotalSpaces",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "organization": {
+              "a": true,
+              "h": "Organization",
+              "n": "organization",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "projectPage": {
+              "a": true,
+              "h": "Project Page",
+              "n": "projectPage",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "publishedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Published At",
+              "n": "publishedAt",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "submissionDeadline": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Submission Deadline",
+              "n": "submissionDeadline",
+              "r": false,
+              "sh": "only available when field contains 'submissionDeadline'",
+              "t": "`$STRING`"
+            },
+            "submittedOnDailyAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Submitted On Daily At",
+              "n": "submittedOnDailyAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "submittedOnDailyBy": {
+              "a": true,
+              "h": "Submitted On Daily By",
+              "n": "submittedOnDailyBy",
+              "r": true,
+              "sh": "User overview information",
+              "t": "`$OBJECT`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "thumbnailUrl": {
+              "a": true,
+              "h": "Thumbnail Url",
+              "n": "thumbnailUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "upvotes": {
+              "a": true,
+              "h": "Upvotes",
+              "n": "upvotes",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "withdrawnAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Withdrawn At",
+              "n": "withdrawnAt",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "paper",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/papers",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 50,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/papers",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "papers"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/papers/search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "",
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/papers/search",
+                  "q": {
+                    "$action": "search"
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "papers"
+                    },
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/papers/{paperId}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "paperId",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "field",
+                        "or": "field",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/papers/{paperId}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "paperId": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "papers"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "profile": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "avatarUrl": {
+              "a": true,
+              "h": "Avatar Url",
+              "n": "avatarUrl",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "createdAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Created At",
+              "n": "createdAt",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "details": {
+              "a": true,
+              "h": "Details",
+              "n": "details",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "fullname": {
+              "a": true,
+              "h": "Fullname",
+              "n": "fullname",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "hardwareItems": {
+              "a": true,
+              "h": "Hardware Items",
+              "n": "hardwareItems",
+              "r": false,
+              "sh": "The user's hardware items, unless the user set them as private",
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "A hex string of 24 characters representing an ObjectId.",
+              "t": "`$STRING`"
+            },
+            "isFollowing": {
+              "a": true,
+              "h": "Is Following",
+              "n": "isFollowing",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "isPro": {
+              "a": true,
+              "h": "Is Pro",
+              "n": "isPro",
+              "r": true,
+              "t": "`$BOOLEAN`"
+            },
+            "numBuckets": {
+              "a": true,
+              "h": "Num Buckets",
+              "n": "numBuckets",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numDatasets": {
+              "a": true,
+              "h": "Num Datasets",
+              "n": "numDatasets",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numDiscussions": {
+              "a": true,
+              "h": "Num Discussions",
+              "n": "numDiscussions",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numFollowers": {
+              "a": true,
+              "h": "Num Followers",
+              "n": "numFollowers",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numFollowing": {
+              "a": true,
+              "h": "Num Following",
+              "n": "numFollowing",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numFollowingOrgs": {
+              "a": true,
+              "h": "Num Following Orgs",
+              "n": "numFollowingOrgs",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numKernels": {
+              "a": true,
+              "h": "Num Kernels",
+              "n": "numKernels",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numLikes": {
+              "a": true,
+              "h": "Num Likes",
+              "n": "numLikes",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numModels": {
+              "a": true,
+              "h": "Num Models",
+              "n": "numModels",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numPapers": {
+              "a": true,
+              "h": "Num Papers",
+              "n": "numPapers",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numSpaces": {
+              "a": true,
+              "h": "Num Spaces",
+              "n": "numSpaces",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "numUpvotes": {
+              "a": true,
+              "h": "Num Upvotes",
+              "n": "numUpvotes",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "orgs": {
+              "a": true,
+              "h": "Orgs",
+              "n": "orgs",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "primaryOrgAvatarUrl": {
+              "a": true,
+              "h": "Primary Org Avatar Url",
+              "n": "primaryOrgAvatarUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "reasonToFollow": {
+              "a": true,
+              "h": "Reason To Follow",
+              "n": "reasonToFollow",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "serviceAccount": {
+              "a": true,
+              "h": "Service Account",
+              "n": "serviceAccount",
+              "r": true,
+              "sh": "Set when the user is a service account",
+              "t": "`$OBJECT`"
+            },
+            "type": {
+              "a": true,
+              "h": "Type",
+              "n": "type",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "user": {
+              "a": true,
+              "h": "User",
+              "n": "user",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "profile",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/users/{username}/overview",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "username",
+                        "or": "username",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/users/{username}/overview",
+                  "q": {
+                    "exist": [
+                      "username"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "users"
+                    },
+                    {
+                      "var": "username"
+                    },
+                    {
+                      "lit": "overview"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "space": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "author": {
+              "a": true,
+              "h": "Author",
+              "n": "author",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "cardData": {
+              "a": true,
+              "h": "Card Data",
+              "n": "cardData",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "createdAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Created At",
+              "n": "createdAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "disabled": {
+              "a": true,
+              "h": "Disabled",
+              "n": "disabled",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "gated": {
+              "a": true,
+              "h": "Gated",
+              "n": "gated",
+              "r": false,
+              "sh": "false, or 'auto' / 'manual' when access needs approval.",
+              "t": "`$ANY`"
+            },
+            "host": {
+              "a": true,
+              "h": "Host",
+              "n": "host",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "op": {
+                "list": {
+                  "req": true,
+                  "type": "`$STRING`"
+                },
+                "load": {
+                  "req": true,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": false,
+              "sh": "Repo id, namespace/name.",
+              "t": "`$STRING`"
+            },
+            "lastModified": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Last Modified",
+              "n": "lastModified",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "likes": {
+              "a": true,
+              "h": "Likes",
+              "n": "likes",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "models": {
+              "a": true,
+              "h": "Models",
+              "n": "models",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "private": {
+              "a": true,
+              "h": "Private",
+              "n": "private",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "runtime": {
+              "a": true,
+              "h": "Runtime",
+              "n": "runtime",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "sdk": {
+              "a": true,
+              "h": "Sdk",
+              "n": "sdk",
+              "r": false,
+              "sh": "gradio, streamlit, docker or static.",
+              "t": "`$STRING`"
+            },
+            "sha": {
+              "a": true,
+              "h": "Sha",
+              "n": "sha",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "siblings": {
+              "a": true,
+              "h": "Siblings",
+              "n": "siblings",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "subdomain": {
+              "a": true,
+              "h": "Subdomain",
+              "n": "subdomain",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "trendingScore": {
+              "a": true,
+              "h": "Trending Score",
+              "n": "trendingScore",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "usedStorage": {
+              "a": true,
+              "h": "Used Storage",
+              "n": "usedStorage",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id",
+            "parts": [
+              "namespace",
+              "repo"
+            ],
+            "sep": "/"
+          },
+          "name": "space",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/spaces",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "author",
+                        "or": "author",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "direction",
+                        "or": "direction",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "filter",
+                        "or": "filter",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "full",
+                        "or": "full",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/spaces",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "spaces"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/spaces/{namespace}/{repo}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "namespace",
+                        "or": "namespace",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "repo",
+                        "or": "repo",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/spaces/{namespace}/{repo}",
+                  "q": {
+                    "exist": [
+                      "namespace",
+                      "repo"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "spaces"
+                    },
+                    {
+                      "var": "namespace"
+                    },
+                    {
+                      "var": "repo"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "trending": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "recentlyTrending": {
+              "a": true,
+              "h": "Recently Trending",
+              "n": "recentlyTrending",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 3,
+                "count": 7,
+                "depth": 11
+              }
+            }
+          },
+          "name": "trending",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/trending",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 10,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "all",
+                        "k": "query",
+                        "n": "type",
+                        "or": "type",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/trending",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "trending"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.recentlyTrending`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicAuthFlow": {
+          "active": true,
+          "entity": "auth",
+          "key$": "BasicAuthFlow",
+          "kind": "basic",
+          "name": "BasicAuthFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "auth_ref01",
+                "srcdatavar": "auth_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-auth_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicCollectionFlow": {
+          "active": true,
+          "entity": "collection",
+          "key$": "BasicCollectionFlow",
+          "kind": "basic",
+          "name": "BasicCollectionFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "collection_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "collection_ref01",
+                "srcdatavar": "collection_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "collection01",
+                "namespace": "namespace01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-collection_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicDailyPaperFlow": {
+          "active": true,
+          "entity": "daily_paper",
+          "key$": "BasicDailyPaperFlow",
+          "kind": "basic",
+          "name": "BasicDailyPaperFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "daily_paper_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicDatasetFlow": {
+          "active": true,
+          "entity": "dataset",
+          "key$": "BasicDatasetFlow",
+          "kind": "basic",
+          "name": "BasicDatasetFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "dataset_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "dataset_ref01",
+                "srcdatavar": "dataset_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "dataset01",
+                "namespace": "namespace01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-dataset_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicModelFlow": {
+          "active": true,
+          "entity": "model",
+          "key$": "BasicModelFlow",
+          "kind": "basic",
+          "name": "BasicModelFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "model_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "model_ref01",
+                "srcdatavar": "model_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "model01",
+                "namespace": "namespace01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-model_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicPaperFlow": {
+          "active": true,
+          "entity": "paper",
+          "key$": "BasicPaperFlow",
+          "kind": "basic",
+          "name": "BasicPaperFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "paper_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "paper_ref01",
+                "srcdatavar": "paper_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "paper01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-paper_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicProfileFlow": {
+          "active": true,
+          "entity": "profile",
+          "key$": "BasicProfileFlow",
+          "kind": "basic",
+          "name": "BasicProfileFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "profile_ref01",
+                "srcdatavar": "profile_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "profile01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-profile_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicSpaceFlow": {
+          "active": true,
+          "entity": "space",
+          "key$": "BasicSpaceFlow",
+          "kind": "basic",
+          "name": "BasicSpaceFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "space_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "space_ref01",
+                "srcdatavar": "space_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "space01",
+                "namespace": "namespace01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-space_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicTrendingFlow": {
+          "active": true,
+          "entity": "trending",
+          "key$": "BasicTrendingFlow",
+          "kind": "basic",
+          "name": "BasicTrendingFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "trending_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "description": "A focused slice of the Hugging Face Hub API: models, datasets, Spaces, papers, collections and users (read operations). Cut from https://huggingface.co/.well-known/openapi.json; the model, dataset and Space list/info endpoints come from spec/supplement.json because the published file does not include them.",
+        "security": {
+          "in": "header",
+          "name": "Authorization",
+          "prefix": "Bearer",
+          "scheme": "bearerAuth",
+          "type": "http"
+        },
+        "servers": [
+          {
+            "description": "Hub",
+            "url": "https://huggingface.co"
+          }
+        ],
+        "summary": "A focused slice of the Hugging Face Hub API: models, datasets, Spaces, papers, collections and users (read operations).",
+        "title": "Hugging Face Hub API",
+        "version": "0.0.1",
+        "website": "https://huggingface.co"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "Kai Chen",
+        "security": "https://github.com/luoy16002-svg/huggingface-hub-sdk/issues",
+        "url": "https://github.com/luoy16002-svg"
+      },
+      "repo": {
+        "host": "github.com",
+        "path": "luoy16002-svg/huggingface-hub-sdk"
+      },
+      "target": {
+        "go": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "huggingface-hub",
+            "package": "",
+            "path": ""
+          },
+          "name": "go",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
+          "title": "Golang"
+        },
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "huggingface-hub",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "huggingface-hub",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "An unofficial SDK for a focused, read-only slice of the Hugging Face Hub API, generated with the Voxgig SDK generator. It is not affiliated with or endorsed by Hugging Face. The spec slice and the reasons for it are in `spec/README.md`.",
+        "docs_url": "https://huggingface.co/docs/hub/api",
+        "entity_desc": {
+          "auth": "The account behind the API token (whoami). Needs HUGGINGFACE_HUB_APIKEY.",
+          "collection": "A curated collection of repos and papers.",
+          "daily_paper": "An entry in Daily Papers: a paper plus who submitted it and when.",
+          "dataset": "A dataset repository, addressed by namespace and repo.",
+          "model": "A model repository, addressed by namespace and repo (for example openai-community / gpt2).",
+          "paper": "A paper on hf.co/papers, addressed by its arXiv id. List with $action search to search.",
+          "profile": "A user profile overview, addressed by username.",
+          "space": "A Space (a hosted demo app), addressed by namespace and repo.",
+          "trending": "One trending repo (model, dataset or Space) from the Hub front page."
+        },
+        "homepage": "",
+        "meta_source": "",
+        "summary": "The Hugging Face Hub hosts open models, datasets and demo apps (Spaces). This SDK covers its public read API.",
+        "tagline": "Search and read models, datasets, Spaces, papers and collections on the Hugging Face Hub.",
+        "title": "Hugging Face Hub",
+        "website": "https://huggingface.co"
+      }
+    }
+  },
+  "name": "huggingface-hub",
+  "name-": "huggingface-hub",
+  "name_": "huggingface_hub",
+  "name__orig": "huggingface-hub",
+  "origin": "voxgig-sdk"
+}

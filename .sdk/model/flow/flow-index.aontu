@@ -1,0 +1,11 @@
+# Flows
+
+@"./BasicAuthFlow.aontu"
+@"./BasicCollectionFlow.aontu"
+@"./BasicDailyPaperFlow.aontu"
+@"./BasicDatasetFlow.aontu"
+@"./BasicModelFlow.aontu"
+@"./BasicPaperFlow.aontu"
+@"./BasicProfileFlow.aontu"
+@"./BasicSpaceFlow.aontu"
+@"./BasicTrendingFlow.aontu"

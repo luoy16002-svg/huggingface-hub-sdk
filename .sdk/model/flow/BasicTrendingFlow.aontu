@@ -1,0 +1,22 @@
+# BasicTrendingFlow
+
+main: kit: flow: BasicTrendingFlow:
+{
+  entity: "trending",
+  kind: "basic",
+  name: "BasicTrendingFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "trending_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTrendingFlow"
+}

@@ -1,0 +1,233 @@
+# Entity: profile
+
+main: kit: entity: profile: {
+
+  alias: field: {}
+
+  fields: {
+    avatarUrl: {
+      h: "Avatar Url"
+      n: "avatarUrl"
+      r: true
+      t: "`$STRING`"
+    }
+    createdAt: {
+      fo: "date-time"
+      h: "Created At"
+      n: "createdAt"
+      r: true
+      t: "`$STRING`"
+    }
+    details: {
+      h: "Details"
+      n: "details"
+      r: false
+      t: "`$STRING`"
+    }
+    fullname: {
+      h: "Fullname"
+      n: "fullname"
+      r: true
+      t: "`$STRING`"
+    }
+    hardwareItems: {
+      h: "Hardware Items"
+      n: "hardwareItems"
+      r: false
+      sh: "The user's hardware items, unless the user set them as private"
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "A hex string of 24 characters representing an ObjectId."
+      t: "`$STRING`"
+    }
+    isFollowing: {
+      h: "Is Following"
+      n: "isFollowing"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    isPro: {
+      h: "Is Pro"
+      n: "isPro"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    numBuckets: {
+      h: "Num Buckets"
+      n: "numBuckets"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numDatasets: {
+      h: "Num Datasets"
+      n: "numDatasets"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numDiscussions: {
+      h: "Num Discussions"
+      n: "numDiscussions"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numFollowers: {
+      h: "Num Followers"
+      n: "numFollowers"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numFollowing: {
+      h: "Num Following"
+      n: "numFollowing"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numFollowingOrgs: {
+      h: "Num Following Orgs"
+      n: "numFollowingOrgs"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numKernels: {
+      h: "Num Kernels"
+      n: "numKernels"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numLikes: {
+      h: "Num Likes"
+      n: "numLikes"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numModels: {
+      h: "Num Models"
+      n: "numModels"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numPapers: {
+      h: "Num Papers"
+      n: "numPapers"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numSpaces: {
+      h: "Num Spaces"
+      n: "numSpaces"
+      r: false
+      t: "`$NUMBER`"
+    }
+    numUpvotes: {
+      h: "Num Upvotes"
+      n: "numUpvotes"
+      r: false
+      t: "`$NUMBER`"
+    }
+    orgs: {
+      h: "Orgs"
+      n: "orgs"
+      r: false
+      t: "`$ARRAY`"
+    }
+    primaryOrgAvatarUrl: {
+      h: "Primary Org Avatar Url"
+      n: "primaryOrgAvatarUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    reasonToFollow: {
+      h: "Reason To Follow"
+      n: "reasonToFollow"
+      r: false
+      t: "`$STRING`"
+    }
+    serviceAccount: {
+      h: "Service Account"
+      n: "serviceAccount"
+      r: true
+      sh: "Set when the user is a service account"
+      t: "`$OBJECT`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+    user: {
+      h: "User"
+      n: "user"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "profile"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/users/{username}/overview"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "username"
+                or: "username"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/users/{username}/overview"
+          q: {
+            exist: [
+              "username"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "username"
+            }
+            {
+              lit: "overview"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

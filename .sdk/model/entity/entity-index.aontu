@@ -1,0 +1,11 @@
+# Entity Models
+
+@"./auth.aontu"
+@"./collection.aontu"
+@"./daily_paper.aontu"
+@"./dataset.aontu"
+@"./model.aontu"
+@"./paper.aontu"
+@"./profile.aontu"
+@"./space.aontu"
+@"./trending.aontu"

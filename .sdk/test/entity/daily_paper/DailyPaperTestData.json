@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "daily_paper": {
+      "DAILY_PAPER00": {
+        "isAuthorParticipating": true,
+        "mediaUrls": [],
+        "numComments": 92,
+        "paper": {},
+        "publishedAt": "s5e",
+        "submittedBy": {},
+        "summary": "s60",
+        "thumbnail": "s61",
+        "title": "s62"
+      },
+      "DAILY_PAPER01": {
+        "isAuthorParticipating": true,
+        "mediaUrls": [],
+        "numComments": 182,
+        "paper": {},
+        "publishedAt": "sb8",
+        "submittedBy": {},
+        "summary": "sba",
+        "thumbnail": "sbb",
+        "title": "sbc"
+      },
+      "DAILY_PAPER02": {
+        "isAuthorParticipating": true,
+        "mediaUrls": [],
+        "numComments": 272,
+        "paper": {},
+        "publishedAt": "s112",
+        "submittedBy": {},
+        "summary": "s114",
+        "thumbnail": "s115",
+        "title": "s116"
+      }
+    }
+  },
+  "new": {
+    "daily_paper": {
+      "daily_paper_ref01": {
+        "isAuthorParticipating": true,
+        "mediaUrls": [],
+        "numComments": 362,
+        "paper": {},
+        "publishedAt": "s16c",
+        "submittedBy": {},
+        "summary": "s16e",
+        "thumbnail": "s16f",
+        "title": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/daily_papers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

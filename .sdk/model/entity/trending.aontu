@@ -1,0 +1,77 @@
+# Entity: trending
+
+main: kit: entity: trending: {
+
+  alias: field: {}
+
+  fields: {
+    recentlyTrending: {
+      h: "Recently Trending"
+      n: "recentlyTrending"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 3
+        count: 7
+        depth: 11
+      }
+    }
+  }
+
+  name: "trending"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/trending"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 10
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "all"
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/trending"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "trending"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.recentlyTrending`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

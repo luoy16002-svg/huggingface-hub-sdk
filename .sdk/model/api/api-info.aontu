@@ -1,0 +1,28 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: "A focused slice of the Hugging Face Hub API: models, datasets, Spaces, papers, collections and users (read operations). Cut from https://huggingface.co/.well-known/openapi.json; the model, dataset and Space list/info endpoints come from spec/supplement.json because the published file does not include them."
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "bearerAuth"
+        type: "http"
+      }
+      servers: [
+        {
+          description: "Hub"
+          url: "https://huggingface.co"
+        }
+      ]
+      summary: "A focused slice of the Hugging Face Hub API: models, datasets, Spaces, papers, collections and users (read operations)."
+      title: "Hugging Face Hub API"
+      version: "0.0.1"
+      website: "https://huggingface.co"
+    }
+  }
+}
+

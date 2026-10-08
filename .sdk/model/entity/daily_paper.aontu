@@ -1,0 +1,159 @@
+# Entity: daily_paper
+
+main: kit: entity: daily_paper: {
+
+  alias: field: {}
+
+  fields: {
+    isAuthorParticipating: {
+      h: "Is Author Participating"
+      n: "isAuthorParticipating"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mediaUrls: {
+      h: "Media Urls"
+      n: "mediaUrls"
+      r: false
+      t: "`$ARRAY`"
+    }
+    numComments: {
+      h: "Num Comments"
+      n: "numComments"
+      r: true
+      t: "`$NUMBER`"
+    }
+    paper: {
+      h: "Paper"
+      n: "paper"
+      r: true
+      sh: "Paper data with metadata"
+      t: "`$OBJECT`"
+    }
+    publishedAt: {
+      fo: "date-time"
+      h: "Published At"
+      n: "publishedAt"
+      r: true
+      t: "`$STRING`"
+    }
+    submittedBy: {
+      h: "Submitted By"
+      n: "submittedBy"
+      r: true
+      sh: "User overview information"
+      t: "`$OBJECT`"
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      t: "`$STRING`"
+    }
+    thumbnail: {
+      h: "Thumbnail"
+      n: "thumbnail"
+      r: true
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "daily_paper"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/daily_papers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "date"
+                or: "date"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 50
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "month"
+                or: "month"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "p"
+                or: "p"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "publishedAt"
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "submitter"
+                or: "submitter"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "week"
+                or: "week"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/daily_papers"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "daily_papers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

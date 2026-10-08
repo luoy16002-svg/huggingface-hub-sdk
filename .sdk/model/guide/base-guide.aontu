@@ -1,0 +1,81 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 7
+  metrics: count: path: 15
+  metrics: count: method: 15
+
+  entity: auth: {
+    path: "/api/whoami-v2": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: collection: {
+    path: "/api/collections": {
+      op: load: method: *GET
+    }
+    path: "/api/collections/{namespace}/{slug}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: dataset: {
+    path: "/api/datasets": {
+      op: list: method: *GET
+    }
+    path: "/api/datasets/{namespace}/{repo}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: model: {
+    path: "/api/models": {
+      op: list: method: *GET
+    }
+    path: "/api/models/{namespace}/{repo}": {
+      op: load: method: *GET
+    }
+    path: "/api/trending": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.recentlyTrending`")|top
+    }
+  }
+
+  entity: paper: {
+    path: "/api/daily_papers": {
+      op: list: method: *GET
+    }
+    path: "/api/papers": {
+      op: list: method: *GET
+    }
+    path: "/api/papers/search": {
+      action: "search": {}
+      op: load: method: *GET
+    }
+    path: "/api/papers/{paperId}": {
+      rename: param: "paperId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: space: {
+    path: "/api/spaces": {
+      op: list: method: *GET
+    }
+    path: "/api/spaces/{namespace}/{repo}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: user: {
+    path: "/api/users/{username}/overview": {
+      action: "overview": {}
+      op: list: method: *GET
+    }
+  }
+
+}

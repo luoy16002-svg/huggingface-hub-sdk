@@ -1,0 +1,29 @@
+{
+  "existing": {
+    "trending": {
+      "TRENDING00": {
+        "recentlyTrending": []
+      },
+      "TRENDING01": {
+        "recentlyTrending": []
+      },
+      "TRENDING02": {
+        "recentlyTrending": []
+      }
+    }
+  },
+  "new": {
+    "trending": {
+      "trending_ref01": {
+        "recentlyTrending": []
+      }
+    }
+  },
+  "requests": {
+    "GET /api/trending": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

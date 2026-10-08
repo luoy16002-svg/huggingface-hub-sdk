@@ -1,0 +1,291 @@
+# Entity: dataset
+
+main: kit: entity: dataset: {
+
+  alias: field: {}
+
+  fields: {
+    author: {
+      h: "Author"
+      n: "author"
+      r: false
+      t: "`$STRING`"
+    }
+    cardData: {
+      h: "Card Data"
+      n: "cardData"
+      r: false
+      t: "`$OBJECT`"
+    }
+    createdAt: {
+      fo: "date-time"
+      h: "Created At"
+      n: "createdAt"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    disabled: {
+      h: "Disabled"
+      n: "disabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    downloads: {
+      h: "Downloads"
+      n: "downloads"
+      r: false
+      t: "`$INTEGER`"
+    }
+    gated: {
+      h: "Gated"
+      n: "gated"
+      r: false
+      sh: "false, or 'auto' / 'manual' when access needs approval."
+      t: "`$ANY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      op: {
+        list: {
+          req: true
+          type: "`$STRING`"
+        }
+        load: {
+          req: true
+          type: "`$STRING`"
+        }
+      }
+      r: false
+      sh: "Repo id, namespace/name."
+      t: "`$STRING`"
+    }
+    lastModified: {
+      fo: "date-time"
+      h: "Last Modified"
+      n: "lastModified"
+      r: false
+      t: "`$STRING`"
+    }
+    likes: {
+      h: "Likes"
+      n: "likes"
+      r: false
+      t: "`$INTEGER`"
+    }
+    paperswithcode_id: {
+      h: "Paperswithcode Id"
+      n: "paperswithcode_id"
+      r: false
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    private: {
+      h: "Private"
+      n: "private"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    sha: {
+      h: "Sha"
+      n: "sha"
+      r: false
+      t: "`$STRING`"
+    }
+    siblings: {
+      h: "Siblings"
+      n: "siblings"
+      r: false
+      t: "`$ARRAY`"
+    }
+    tags: {
+      h: "Tags"
+      n: "tags"
+      r: false
+      t: "`$ARRAY`"
+    }
+    trendingScore: {
+      h: "Trending Score"
+      n: "trendingScore"
+      r: false
+      t: "`$NUMBER`"
+    }
+    usedStorage: {
+      h: "Used Storage"
+      n: "usedStorage"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+    parts: [
+      "namespace"
+      "repo"
+    ]
+    sep: "/"
+  }
+
+  name: "dataset"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/datasets"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "author"
+                or: "author"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "direction"
+                or: "direction"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "filter"
+                or: "filter"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "full"
+                or: "full"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/datasets"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "datasets"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/datasets/{namespace}/{repo}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "namespace"
+                or: "namespace"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "repo"
+                or: "repo"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/datasets/{namespace}/{repo}"
+          q: {
+            exist: [
+              "namespace"
+              "repo"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "datasets"
+            }
+            {
+              var: "namespace"
+            }
+            {
+              var: "repo"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

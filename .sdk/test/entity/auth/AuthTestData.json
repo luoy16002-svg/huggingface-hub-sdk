@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "auth": {
+      "AUTH00": {
+        "id": "AUTH00"
+      },
+      "AUTH01": {
+        "id": "AUTH01"
+      },
+      "AUTH02": {
+        "id": "AUTH02"
+      }
+    }
+  },
+  "new": {
+    "auth": {
+      "auth_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/whoami-v2": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "existing": {
+    "collection": {
+      "COLLECTION00": {
+        "description": "s96",
+        "gating": "s97",
+        "id": "COLLECTION00",
+        "isUpvotedByUser": false,
+        "items": [],
+        "lastUpdated": "s9b",
+        "owner": "s9c",
+        "position": 157,
+        "private": true,
+        "resourceGroup": {},
+        "shareUrl": "sa0",
+        "slug": "sa1",
+        "theme": "sa2",
+        "title": "sa3",
+        "upvotes": 164,
+        "namespace": "NAMESPACE01"
+      },
+      "COLLECTION01": {
+        "description": "s12c",
+        "gating": "s12d",
+        "id": "COLLECTION01",
+        "isUpvotedByUser": false,
+        "items": [],
+        "lastUpdated": "s131",
+        "owner": "s132",
+        "position": 307,
+        "private": true,
+        "resourceGroup": {},
+        "shareUrl": "s136",
+        "slug": "s137",
+        "theme": "s138",
+        "title": "s139",
+        "upvotes": 314,
+        "namespace": "NAMESPACE01"
+      },
+      "COLLECTION02": {
+        "description": "s1c2",
+        "gating": "s1c3",
+        "id": "COLLECTION02",
+        "isUpvotedByUser": false,
+        "items": [],
+        "lastUpdated": "s1c7",
+        "owner": "s1c8",
+        "position": 457,
+        "private": true,
+        "resourceGroup": {},
+        "shareUrl": "s1cc",
+        "slug": "s1cd",
+        "theme": "s1ce",
+        "title": "s1cf",
+        "upvotes": 464,
+        "namespace": "NAMESPACE01"
+      }
+    }
+  },
+  "new": {
+    "collection": {
+      "collection_ref01": {
+        "description": "s258",
+        "gating": "s259",
+        "isUpvotedByUser": false,
+        "items": [],
+        "lastUpdated": "s25d",
+        "owner": "s25e",
+        "position": 607,
+        "private": true,
+        "resourceGroup": {},
+        "shareUrl": "s262",
+        "slug": "s263",
+        "theme": "s264",
+        "title": "s265",
+        "upvotes": 614
+      }
+    }
+  },
+  "requests": {
+    "GET /api/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/collections/{namespace}/{slug}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

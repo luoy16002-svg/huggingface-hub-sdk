@@ -1,0 +1,142 @@
+{
+  "existing": {
+    "paper": {
+      "PAPER00": {
+        "ai_keywords": [],
+        "ai_summary": "s10f",
+        "ai_summary_model": "s110",
+        "authors": [],
+        "comments": [],
+        "discussionId": "s113",
+        "githubRepo": "s114",
+        "githubStars": 277,
+        "id": "PAPER00",
+        "linkedDatasets": [],
+        "linkedModels": [],
+        "linkedSpaces": [],
+        "mediaUrls": [],
+        "numTotalDatasets": 283,
+        "numTotalModels": 284,
+        "numTotalSpaces": 285,
+        "organization": {},
+        "projectPage": "s11f",
+        "publishedAt": "s120",
+        "submissionDeadline": "s121",
+        "submittedOnDailyAt": "s122",
+        "submittedOnDailyBy": {},
+        "summary": "s124",
+        "thumbnailUrl": "s125",
+        "title": "s126",
+        "upvotes": 295,
+        "withdrawnAt": "s128"
+      },
+      "PAPER01": {
+        "ai_keywords": [],
+        "ai_summary": "s21d",
+        "ai_summary_model": "s21e",
+        "authors": [],
+        "comments": [],
+        "discussionId": "s221",
+        "githubRepo": "s222",
+        "githubStars": 547,
+        "id": "PAPER01",
+        "linkedDatasets": [],
+        "linkedModels": [],
+        "linkedSpaces": [],
+        "mediaUrls": [],
+        "numTotalDatasets": 553,
+        "numTotalModels": 554,
+        "numTotalSpaces": 555,
+        "organization": {},
+        "projectPage": "s22d",
+        "publishedAt": "s22e",
+        "submissionDeadline": "s22f",
+        "submittedOnDailyAt": "s230",
+        "submittedOnDailyBy": {},
+        "summary": "s232",
+        "thumbnailUrl": "s233",
+        "title": "s234",
+        "upvotes": 565,
+        "withdrawnAt": "s236"
+      },
+      "PAPER02": {
+        "ai_keywords": [],
+        "ai_summary": "s32b",
+        "ai_summary_model": "s32c",
+        "authors": [],
+        "comments": [],
+        "discussionId": "s32f",
+        "githubRepo": "s330",
+        "githubStars": 817,
+        "id": "PAPER02",
+        "linkedDatasets": [],
+        "linkedModels": [],
+        "linkedSpaces": [],
+        "mediaUrls": [],
+        "numTotalDatasets": 823,
+        "numTotalModels": 824,
+        "numTotalSpaces": 825,
+        "organization": {},
+        "projectPage": "s33b",
+        "publishedAt": "s33c",
+        "submissionDeadline": "s33d",
+        "submittedOnDailyAt": "s33e",
+        "submittedOnDailyBy": {},
+        "summary": "s340",
+        "thumbnailUrl": "s341",
+        "title": "s342",
+        "upvotes": 835,
+        "withdrawnAt": "s344"
+      }
+    }
+  },
+  "new": {
+    "paper": {
+      "paper_ref01": {
+        "ai_keywords": [],
+        "ai_summary": "s439",
+        "ai_summary_model": "s43a",
+        "authors": [],
+        "comments": [],
+        "discussionId": "s43d",
+        "githubRepo": "s43e",
+        "githubStars": 1087,
+        "linkedDatasets": [],
+        "linkedModels": [],
+        "linkedSpaces": [],
+        "mediaUrls": [],
+        "numTotalDatasets": 1093,
+        "numTotalModels": 1094,
+        "numTotalSpaces": 1095,
+        "organization": {},
+        "projectPage": "s449",
+        "publishedAt": "s44a",
+        "submissionDeadline": "s44b",
+        "submittedOnDailyAt": "s44c",
+        "submittedOnDailyBy": {},
+        "summary": "s44e",
+        "thumbnailUrl": "s44f",
+        "title": "s450",
+        "upvotes": 1105,
+        "withdrawnAt": "s452"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/papers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/papers/search": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/papers/{paperId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

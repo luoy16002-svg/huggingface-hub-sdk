@@ -1,0 +1,675 @@
+{
+  "paths": {
+    "/api/models": {
+      "get": {
+        "tags": [
+          "models"
+        ],
+        "summary": "List models",
+        "description": "Search and list models on the Hub. Documented at https://huggingface.co/docs/hub/api.",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "description": "Filter by a substring of the repo id.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "author",
+            "in": "query",
+            "required": false,
+            "description": "Filter by owner (user or organisation).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Filter by tag, for example a library, task or language tag.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Property to sort by, for example downloads, likes, trendingScore, createdAt or lastModified.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "query",
+            "required": false,
+            "description": "Sort direction; -1 for descending.",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "required": false,
+            "description": "Return the full record for each result.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching models.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Model"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/models/{namespace}/{repo}": {
+      "get": {
+        "tags": [
+          "models"
+        ],
+        "summary": "Get model info",
+        "description": "Information about one model repository. Documented at https://huggingface.co/docs/hub/api.",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "description": "Owner (user or organisation).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "description": "Repository name.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The model.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Model"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found, or private without access."
+          }
+        }
+      }
+    },
+    "/api/datasets": {
+      "get": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "List datasets",
+        "description": "Search and list datasets on the Hub. Documented at https://huggingface.co/docs/hub/api.",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "description": "Filter by a substring of the repo id.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "author",
+            "in": "query",
+            "required": false,
+            "description": "Filter by owner (user or organisation).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Filter by tag, for example a library, task or language tag.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Property to sort by, for example downloads, likes, trendingScore, createdAt or lastModified.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "query",
+            "required": false,
+            "description": "Sort direction; -1 for descending.",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "required": false,
+            "description": "Return the full record for each result.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching datasets.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Dataset"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/datasets/{namespace}/{repo}": {
+      "get": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get dataset info",
+        "description": "Information about one dataset repository. Documented at https://huggingface.co/docs/hub/api.",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "description": "Owner (user or organisation).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "description": "Repository name.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The dataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dataset"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found, or private without access."
+          }
+        }
+      }
+    },
+    "/api/spaces": {
+      "get": {
+        "tags": [
+          "spaces"
+        ],
+        "summary": "List spaces",
+        "description": "Search and list spaces on the Hub. Documented at https://huggingface.co/docs/hub/api.",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "description": "Filter by a substring of the repo id.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "author",
+            "in": "query",
+            "required": false,
+            "description": "Filter by owner (user or organisation).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Filter by tag, for example a library, task or language tag.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Property to sort by, for example downloads, likes, trendingScore, createdAt or lastModified.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "query",
+            "required": false,
+            "description": "Sort direction; -1 for descending.",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "required": false,
+            "description": "Return the full record for each result.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching spaces.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Space"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/spaces/{namespace}/{repo}": {
+      "get": {
+        "tags": [
+          "spaces"
+        ],
+        "summary": "Get space info",
+        "description": "Information about one space repository. Documented at https://huggingface.co/docs/hub/api.",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "required": true,
+            "description": "Owner (user or organisation).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "description": "Repository name.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Space"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found, or private without access."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Model": {
+        "type": "object",
+        "description": "A model repository on the Hub.",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "description": "Repo id, namespace/name."
+          },
+          "author": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "disabled": {
+            "type": "boolean"
+          },
+          "gated": {
+            "description": "false, or 'auto' / 'manual' when access needs approval."
+          },
+          "likes": {
+            "type": "integer"
+          },
+          "trendingScore": {
+            "type": "number"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cardData": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "siblings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rfilename": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "usedStorage": {
+            "type": "integer"
+          },
+          "modelId": {
+            "type": "string"
+          },
+          "downloads": {
+            "type": "integer"
+          },
+          "pipeline_tag": {
+            "type": "string"
+          },
+          "library_name": {
+            "type": "string"
+          },
+          "config": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "safetensors": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "spaces": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "Dataset": {
+        "type": "object",
+        "description": "A dataset repository on the Hub.",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "description": "Repo id, namespace/name."
+          },
+          "author": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "disabled": {
+            "type": "boolean"
+          },
+          "gated": {
+            "description": "false, or 'auto' / 'manual' when access needs approval."
+          },
+          "likes": {
+            "type": "integer"
+          },
+          "trendingScore": {
+            "type": "number"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cardData": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "siblings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rfilename": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "usedStorage": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "downloads": {
+            "type": "integer"
+          },
+          "paperswithcode_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "Space": {
+        "type": "object",
+        "description": "A Space (hosted app) on the Hub.",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "description": "Repo id, namespace/name."
+          },
+          "author": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "disabled": {
+            "type": "boolean"
+          },
+          "gated": {
+            "description": "false, or 'auto' / 'manual' when access needs approval."
+          },
+          "likes": {
+            "type": "integer"
+          },
+          "trendingScore": {
+            "type": "number"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cardData": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "siblings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rfilename": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "usedStorage": {
+            "type": "integer"
+          },
+          "sdk": {
+            "type": "string",
+            "description": "gradio, streamlit, docker or static."
+          },
+          "subdomain": {
+            "type": "string"
+          },
+          "host": {
+            "type": "string"
+          },
+          "runtime": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "models": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    }
+  }
+}

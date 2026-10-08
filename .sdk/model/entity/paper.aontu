@@ -1,0 +1,363 @@
+# Entity: paper
+
+main: kit: entity: paper: {
+
+  alias: field: {}
+
+  fields: {
+    ai_keywords: {
+      h: "Ai Keywords"
+      n: "ai_keywords"
+      r: false
+      t: "`$ARRAY`"
+    }
+    ai_summary: {
+      h: "Ai Summary"
+      n: "ai_summary"
+      r: false
+      t: "`$STRING`"
+    }
+    ai_summary_model: {
+      h: "Ai Summary Model"
+      n: "ai_summary_model"
+      r: false
+      t: "`$STRING`"
+    }
+    authors: {
+      h: "Authors"
+      n: "authors"
+      r: true
+      t: "`$ARRAY`"
+    }
+    comments: {
+      h: "Comments"
+      n: "comments"
+      r: false
+      sh: "only available when field contains 'comments'"
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 2
+        depth: 7
+      }
+    }
+    discussionId: {
+      h: "Discussion Id"
+      n: "discussionId"
+      r: true
+      t: "`$STRING`"
+    }
+    githubRepo: {
+      h: "Github Repo"
+      n: "githubRepo"
+      r: false
+      t: "`$STRING`"
+    }
+    githubStars: {
+      h: "Github Stars"
+      n: "githubStars"
+      r: false
+      t: "`$NUMBER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    linkedDatasets: {
+      h: "Linked Datasets"
+      n: "linkedDatasets"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 3
+      }
+    }
+    linkedModels: {
+      h: "Linked Models"
+      n: "linkedModels"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 2
+        depth: 3
+      }
+    }
+    linkedSpaces: {
+      h: "Linked Spaces"
+      n: "linkedSpaces"
+      r: true
+      t: "`$ARRAY`"
+    }
+    mediaUrls: {
+      h: "Media Urls"
+      n: "mediaUrls"
+      r: false
+      t: "`$ARRAY`"
+    }
+    numTotalDatasets: {
+      h: "Num Total Datasets"
+      n: "numTotalDatasets"
+      r: true
+      t: "`$NUMBER`"
+    }
+    numTotalModels: {
+      h: "Num Total Models"
+      n: "numTotalModels"
+      r: true
+      t: "`$NUMBER`"
+    }
+    numTotalSpaces: {
+      h: "Num Total Spaces"
+      n: "numTotalSpaces"
+      r: true
+      t: "`$NUMBER`"
+    }
+    organization: {
+      h: "Organization"
+      n: "organization"
+      r: true
+      t: "`$OBJECT`"
+    }
+    projectPage: {
+      h: "Project Page"
+      n: "projectPage"
+      r: false
+      t: "`$STRING`"
+    }
+    publishedAt: {
+      fo: "date-time"
+      h: "Published At"
+      n: "publishedAt"
+      r: true
+      t: "`$STRING`"
+    }
+    submissionDeadline: {
+      fo: "date-time"
+      h: "Submission Deadline"
+      n: "submissionDeadline"
+      r: false
+      sh: "only available when field contains 'submissionDeadline'"
+      t: "`$STRING`"
+    }
+    submittedOnDailyAt: {
+      fo: "date-time"
+      h: "Submitted On Daily At"
+      n: "submittedOnDailyAt"
+      r: false
+      t: "`$STRING`"
+    }
+    submittedOnDailyBy: {
+      h: "Submitted On Daily By"
+      n: "submittedOnDailyBy"
+      r: true
+      sh: "User overview information"
+      t: "`$OBJECT`"
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      t: "`$STRING`"
+    }
+    thumbnailUrl: {
+      h: "Thumbnail Url"
+      n: "thumbnailUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    upvotes: {
+      h: "Upvotes"
+      n: "upvotes"
+      r: true
+      t: "`$NUMBER`"
+    }
+    withdrawnAt: {
+      fo: "date-time"
+      h: "Withdrawn At"
+      n: "withdrawnAt"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "paper"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/papers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 50
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/papers"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "papers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/papers/search"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: ""
+                k: "query"
+                n: "q"
+                or: "q"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/papers/search"
+          q: {
+            "$action": "search"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "papers"
+            }
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/papers/{paperId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "paperId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "field"
+                or: "field"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/papers/{paperId}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              paperId: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "papers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

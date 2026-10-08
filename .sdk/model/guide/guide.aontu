@@ -1,0 +1,45 @@
+# Guide
+
+@"@voxgig/apidef/model/guide.aontu"
+
+@"./base-guide.aontu"
+
+
+# Corrections to the heuristic (Kai, 2026-10-08). Each one is something the
+# base guide got wrong for this API; see REPORT.md.
+
+guide: {
+
+  # A Hub repo id is "namespace/name", and the routes take the two halves.
+  entity: model: id: { parts: ["namespace", "repo"], sep: "/" }
+  entity: dataset: id: { parts: ["namespace", "repo"], sep: "/" }
+  entity: space: id: { parts: ["namespace", "repo"], sep: "/" }
+
+  # /api/trending mixes models, datasets and Spaces, so it is its own list
+  # rather than a second route for Model.list.
+  entity: model: path: "/api/trending": active: false
+  entity: trending: path: "/api/trending": op: list: {
+    method: GET
+    transform: res: "`body.recentlyTrending`"
+  }
+
+  # Daily Papers entries wrap a paper with submission data: their own list.
+  entity: paper: path: "/api/daily_papers": active: false
+  entity: daily_paper: path: "/api/daily_papers": op: list: method: GET
+
+  # Search returns an array, so it is a list action, not a load.
+  entity: paper: path: "/api/papers/search": op: {
+    load: active: false
+    list: method: GET
+  }
+
+  # GET /api/collections is the collection list, not a load.
+  entity: collection: path: "/api/collections": op: {
+    load: active: false
+    list: method: GET
+  }
+
+  # One user's profile: a load by username, not a list action.
+  entity: user: active: false
+  entity: profile: path: "/api/users/{username}/overview": op: load: method: GET
+}

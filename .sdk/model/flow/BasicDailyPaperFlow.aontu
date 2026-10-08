@@ -1,0 +1,22 @@
+# BasicDailyPaperFlow
+
+main: kit: flow: BasicDailyPaperFlow:
+{
+  entity: "daily_paper",
+  kind: "basic",
+  name: "BasicDailyPaperFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "daily_paper_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDailyPaperFlow"
+}

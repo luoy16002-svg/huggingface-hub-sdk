@@ -1,0 +1,103 @@
+{
+  "existing": {
+    "dataset": {
+      "DATASET00": {
+        "author": "saa",
+        "cardData": {},
+        "createdAt": "sac",
+        "description": "sad",
+        "disabled": true,
+        "downloads": 175,
+        "gated": "sb0",
+        "id": "DATASET00",
+        "lastModified": "sb2",
+        "likes": 179,
+        "paperswithcode_id": "PAPERSWITHCODE01",
+        "private": false,
+        "sha": "sb6",
+        "siblings": [],
+        "tags": [],
+        "trendingScore": 185,
+        "usedStorage": 186,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      },
+      "DATASET01": {
+        "author": "s154",
+        "cardData": {},
+        "createdAt": "s156",
+        "description": "s157",
+        "disabled": true,
+        "downloads": 345,
+        "gated": "s15a",
+        "id": "DATASET01",
+        "lastModified": "s15c",
+        "likes": 349,
+        "paperswithcode_id": "PAPERSWITHCODE01",
+        "private": false,
+        "sha": "s160",
+        "siblings": [],
+        "tags": [],
+        "trendingScore": 355,
+        "usedStorage": 356,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      },
+      "DATASET02": {
+        "author": "s1fe",
+        "cardData": {},
+        "createdAt": "s200",
+        "description": "s201",
+        "disabled": true,
+        "downloads": 515,
+        "gated": "s204",
+        "id": "DATASET02",
+        "lastModified": "s206",
+        "likes": 519,
+        "paperswithcode_id": "PAPERSWITHCODE01",
+        "private": false,
+        "sha": "s20a",
+        "siblings": [],
+        "tags": [],
+        "trendingScore": 525,
+        "usedStorage": 526,
+        "namespace": "NAMESPACE01",
+        "repo": "REPO01"
+      }
+    }
+  },
+  "new": {
+    "dataset": {
+      "dataset_ref01": {
+        "author": "s2a8",
+        "cardData": {},
+        "createdAt": "s2aa",
+        "description": "s2ab",
+        "disabled": true,
+        "downloads": 685,
+        "gated": "s2ae",
+        "lastModified": "s2b0",
+        "likes": 689,
+        "paperswithcode_id": "PAPERSWITHCODE01",
+        "private": false,
+        "sha": "s2b4",
+        "siblings": [],
+        "tags": [],
+        "trendingScore": 695,
+        "usedStorage": 696
+      }
+    }
+  },
+  "requests": {
+    "GET /api/datasets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/datasets/{namespace}/{repo}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
